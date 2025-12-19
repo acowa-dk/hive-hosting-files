@@ -63,8 +63,6 @@ services:
 
   cache:
     image: redis:8.4.0
-    ports:
-      - "${REDIS_PORT}:${REDIS_PORT}"  # custom port externally
     env_file:
       - .env
     networks:
@@ -82,3 +80,4 @@ services:
     networks:
       - backend
       
+
